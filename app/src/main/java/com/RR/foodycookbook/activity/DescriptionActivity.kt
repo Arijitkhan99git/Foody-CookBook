@@ -56,7 +56,7 @@ class DescriptionActivity : AppCompatActivity() {
         if (intent != null) {
             dishId = intent?.getStringExtra("idMeal").toString()
         } else {
-            Toast.makeText(this@DescriptionActivity, "Some unexpected eroor", Toast.LENGTH_SHORT)
+            Toast.makeText(this@DescriptionActivity, "Some unexpected error occurred", Toast.LENGTH_SHORT)
                 .show()
         }
 
@@ -99,13 +99,13 @@ class DescriptionActivity : AppCompatActivity() {
 
                             if (isFav)
                             {
-                                btnAddToFavDish.text="Remove from Favourites"
+                                btnAddToFavDish.text="Remove from Favourite"
                                 val favColor= ContextCompat.getColor(applicationContext,R.color.colorFav)
                                 btnAddToFavDish.setBackgroundColor(favColor)
                             }
                             else
                             {
-                                btnAddToFavDish.text="Add to Favoirites"
+                                btnAddToFavDish.text="Add to Favourite"
                                 val nofavColor= ContextCompat.getColor(applicationContext,R.color.colorNoFav)
                                 btnAddToFavDish.setBackgroundColor(nofavColor)
                             }
@@ -131,7 +131,7 @@ class DescriptionActivity : AppCompatActivity() {
 
                                     }
                                     else {
-                                        Toast.makeText(this@DescriptionActivity,"Some error occoured!!",Toast.LENGTH_SHORT).show()
+                                        Toast.makeText(this@DescriptionActivity,"Some error occurred !",Toast.LENGTH_SHORT).show()
                                     }
 
                                 }
@@ -144,13 +144,13 @@ class DescriptionActivity : AppCompatActivity() {
                                     {
                                         Toast.makeText(this@DescriptionActivity,"Remove from Favourites",Toast.LENGTH_SHORT).show()
 
-                                        btnAddToFavDish.text="Add to Favoirites"
+                                        btnAddToFavDish.text="Add to Favourites"
                                         val nofavColor= ContextCompat.getColor(applicationContext,R.color.colorNoFav)
                                         btnAddToFavDish.setBackgroundColor(nofavColor)
                                     }
                                     else
                                     {
-                                        Toast.makeText(this@DescriptionActivity,"Some error occoured!!",Toast.LENGTH_SHORT).show()
+                                        Toast.makeText(this@DescriptionActivity,"Some error occurred !",Toast.LENGTH_SHORT).show()
                                     }
                                 }
 
@@ -158,7 +158,7 @@ class DescriptionActivity : AppCompatActivity() {
                     } catch (e: Exception) {
                         Toast.makeText(
                             this@DescriptionActivity,
-                            "Some error 2 ocoured",
+                            "Some error occurred !",
                             Toast.LENGTH_SHORT
                         ).show()
                     }
@@ -166,7 +166,7 @@ class DescriptionActivity : AppCompatActivity() {
                 Response.ErrorListener {
                     Toast.makeText(
                         this@DescriptionActivity,
-                        "Volley error  ocoured",
+                        "Some error occurred !",
                         Toast.LENGTH_SHORT
                     ).show()
                 }) {

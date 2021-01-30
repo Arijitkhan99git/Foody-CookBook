@@ -16,12 +16,21 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark"
         />
 
+<LinearLayout
+    android:id="@+id/DesScrollLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="10"
+    android:layout_below="@+id/DesToolbar"
+    android:orientation="vertical"
+    android:layout_marginBottom="10dp">
+
     <ScrollView
         android:id="@+id/DesScroll"
-        android:layout_below="@id/DesToolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:padding="5dp">
 
         <RelativeLayout
             android:id="@+id/layoutDes"
@@ -83,19 +92,27 @@
 
     </ScrollView>
 
-
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_below="@+id/DesScrollLayout"
+        android:padding="6dp"
+        >
     <Button
         android:id="@+id/btnAddToFavDish"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="add to favourites"
         android:textStyle="bold"
-        android:layout_alignParentBottom="true"
         android:textColor="#ffffff"
-        android:background="#FF5722"
-        android:padding="6dp"
+        android:background="@drawable/button_roundfav"
+        android:layout_alignParentBottom="true"
         android:layout_margin="5dp"
         />
+    </RelativeLayout>
+</LinearLayout>
+
     <RelativeLayout
         android:id="@+id/DesProgressLayout"
         android:layout_width="match_parent"
@@ -107,4 +124,5 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"/>
     </RelativeLayout>
+
 </RelativeLayout>

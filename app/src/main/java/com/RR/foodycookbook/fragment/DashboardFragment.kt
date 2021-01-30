@@ -103,7 +103,7 @@ class DashboardFragment(val search_bar: androidx.appcompat.widget.SearchView) : 
                         } catch (e: JSONException) {
                             Toast.makeText(
                                 activity as Context,
-                                "some Unexpected error occoured",
+                                "some Unexpected error occurred !",
                                 Toast.LENGTH_SHORT
                             ).show()
                         }
@@ -114,7 +114,7 @@ class DashboardFragment(val search_bar: androidx.appcompat.widget.SearchView) : 
                         if (activity != null) {
                             Toast.makeText(
                                 activity as Context,
-                                "Volley error occoured",
+                                "Some error occurred",
                                 Toast.LENGTH_SHORT
                             ).show()
                         }
@@ -142,7 +142,7 @@ class DashboardFragment(val search_bar: androidx.appcompat.widget.SearchView) : 
             val dialog = AlertDialog.Builder(activity as Context)
 
             dialog.setTitle("Failure")
-            dialog.setMessage("Internet Connection not Found")
+            dialog.setMessage("Internet Connection not Found ")
 
             dialog.setPositiveButton("Open Settings") { text, Listner ->
                 //do Somethings

@@ -35,9 +35,8 @@ class MainActivity : AppCompatActivity()
         setSupportActionBar(toolbar)
         supportActionBar?.title = "Foody CookBook"
 
-        supportFragmentManager.beginTransaction().replace(R.id.frame, DashboardFragment(search_bar)).commit()
-        search_bar.visibility=View.VISIBLE
-        FavButton.visibility=View.VISIBLE
+        openDashboardFragment()
+
         FavButton.setOnClickListener {
             supportFragmentManager.beginTransaction().replace(R.id.frame,FavouriteFragment()).commit()
             search_bar.visibility=View.GONE
@@ -49,7 +48,7 @@ class MainActivity : AppCompatActivity()
         val frag=supportFragmentManager.findFragmentById(R.id.frame)
 
         when(frag){
-            !is DashboardFragment ->supportFragmentManager.beginTransaction().replace(R.id.frame, DashboardFragment(search_bar)).commit()
+            !is DashboardFragment ->openDashboardFragment()
 
             else->
             {
@@ -57,5 +56,11 @@ class MainActivity : AppCompatActivity()
             }
             //else->super.onBackPressed()
         }
+    }
+    fun openDashboardFragment()
+    {
+        supportFragmentManager.beginTransaction().replace(R.id.frame, DashboardFragment(search_bar)).commit()
+        search_bar.visibility=View.VISIBLE
+        FavButton.visibility=View.VISIBLE
     }
 }
